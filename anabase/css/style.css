@@ -1,0 +1,344 @@
+/* MENU */
+
+.titre_menu {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*barre de navigation*/
+.navigation {
+    border-radius: 50px;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0
+}
+
+.navigation li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.navigation a {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: rgb(86, 86, 86);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #2799a7;
+}
+
+#separateur_entete {
+    font-size: 35px;
+}
+
+.item__link {
+    padding: 0.5em;
+    color: #456;
+    display: block;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+}
+
+.item__link::after {
+    content: "";
+    display: block;
+    border-bottom: 5px solid #2799a7;
+    margin-top: 0.5em;
+    transition: all ease-in-out 0.3s;
+    transform: translate(0, 100%);
+}
+
+.item__link:hover {
+    color: #2799a7;
+}
+
+.item__link:hover::after {
+    transform: translate(0, 0);
+}
+
+.reveal_zoom {
+    opacity: 0;
+}
+
+.reveal_zoom.active {
+    opacity: 1;
+    animation: 2s zoom;
+}
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#paiement:hover .sous-menu {
+    display: block;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.sous-menu li {
+    display: block;
+    width: 100%;
+}
+
+.sous-menu a {
+    padding: 10px;
+    color: #333;
+    font-size: 20px;
+
+}
+
+.sous-menu a:hover {
+    background-color: #2799a7;
+    color: #fff;
+}
+
+.div_gestion {
+    display: flex;
+}
+
+/* GESTION PAYEUR TABLEAU */
+.table_gestion {
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    left: 50%;
+    margin-left: 10%;
+}
+
+.div_gestion table {
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.div_gestion th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+.div_gestion th {
+    background-color: #C0C0C0;
+}
+
+.div_gestion tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.form_gestion {
+    width: 50%;
+}
+
+.form_org {
+    width: 500px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.formulaire_create {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.create_input_text {
+    border-radius: 15px;
+    text-align: center;
+    width: 75%;
+}
+
+/* FACTURATION */
+
+.formFacturation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PAIEMENT */
+
+.gestionBoutonFacture {
+    margin-left: 22%;
+}
+
+.boutonFacture {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.boutonFacture a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2b44ff;
+    display: block;
+    position: relative;
+    padding: 20px 40px;
+
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #2b44ff;
+    border-radius: 5px;
+}
+
+.boutonFacture a:active {
+    top: 10px;
+    background-color: #2b44ff;
+
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #c4d2ff;
+}
+
+.boutonFacture:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.div_paiement fieldset {
+    border-radius: 0%;
+}
+
+.div_paiement table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.div_paiement th,
+td {
+    text-align: left;
+    padding: 15px;
+}
+
+.div_paiement th {
+    background-color: #C0C0C0;
+
+
+}
+
+.div_paiement tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.div_table_paiement {
+    margin: auto;
+}
+
+.table_paiement th {
+    font-size: 15px;
+}
+
+/* PAYER LES FACTURES */
+.bouton-retour {
+    display: block;
+    margin-top: -2.5%;
+    margin-left: 4%;
+}
+
+/* PAYER LA FACTURE */
+
+.payment form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.payment label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.payment input[type="month"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.payment select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.payment input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.payment input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.payment input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+.success {
+    color: green;
+}
+
+.payment fieldset {
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 10px;
+}
+
+.payment .alert-message {
+    width: 60%;
+    margin-left: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+}
+
+/* PIED DE PAGE */
+
+.pied {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
